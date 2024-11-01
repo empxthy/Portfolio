@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Geist';
+  src: url('./assets/fonts/GeistMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: Geist, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --primary-color: #0098ea;
+  --primary-color-hover: #07acff;
+
+  color-scheme: light dark;
+  color: #213547;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white;
+  overflow: overlay;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Фон скролл-бара */
+::-webkit-scrollbar-track {
+  background: #6d0b6e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ae20b0;
+  border-radius: 10px;
+}
