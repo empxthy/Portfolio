@@ -1,5 +1,5 @@
-import Index from './components/page-index/index/Index';
-import './index.scss'
+import Index from './components/pages/index/Index';
+import './main.scss'
 
 function App() {
 
