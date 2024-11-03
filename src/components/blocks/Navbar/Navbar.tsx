@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faUser, faDiagramProject, faAddressBook, faStar } from "@fortawesome/free-solid-svg-icons";
-import Logo from "../../../assets/logo.svg";
+
 import "./Navbar.module.scss";
 import Styles from './Navbar.module.scss';
 
@@ -25,7 +25,7 @@ function NavBar() {
     }, []);
 
     return(
-        <nav className={`fixed top-0 w-full z-50 py-4 px-4 transition duration-300 ${isScrolled ? 'bg-gray-800 backdrop-blur-lg' : 'bg-transparent'}`}>
+        <nav className={`fixed top-0 w-full z-50 py-4 px-4 transition duration-300 ${isScrolled ? 'bg-black-800 backdrop-blur-lg' : 'bg-transparent'}`}>
             <div className="container mx-auto flex items-center px-28">
                 <h1 className={Styles.logo}>AlexM. </h1>
                 <ul className="flex ml-auto space-x-4 relative">
