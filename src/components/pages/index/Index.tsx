@@ -2,8 +2,6 @@ import Typewriter from "typewriter-effect";
 import NavBar from "../../blocks/Navbar/Navbar";
 import styles from './index.module.scss';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter } from "@fortawesome/free-solid-svg-icons";
 
 import Programmer from "../../../assets/programmer.png";
 import Boy from "../../../assets/boy.png";
