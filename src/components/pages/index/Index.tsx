@@ -15,12 +15,16 @@ function Index() {
         const x = (offsetX / clientWidth - 0.5) * 30;
         const y = (offsetY / clientHeight - 0.5) * -30;
 
-        img.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
+        if(img) {
+            img.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
+        }
     };
 
     const handleMouseLeave = () => {
         const img = document.getElementById('boyImage');
-        img.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        if(img) {
+            img.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        }
     };
 
     return (
