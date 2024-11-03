@@ -7,15 +7,18 @@ import Programmer from "../../../assets/programmer.png";
 import Boy from "../../../assets/boy.png";
 
 function Index() {
-    const handleMouse = (e) => {
-        const img = document.getElementById('boyImage');
+    const handleMouse = (e: React.MouseEvent) => {
+        const img = document.getElementById('boyImage') as HTMLImageElement;
         const { offsetX, offsetY, target } = e.nativeEvent;
-        const { clientWidth, clientHeight } = target;
+        
+        const targetElement = target as HTMLElement;
+        const clientWidth = targetElement.clientWidth;
+        const clientHeight = targetElement.clientHeight;
 
         const x = (offsetX / clientWidth - 0.5) * 30;
         const y = (offsetY / clientHeight - 0.5) * -30;
 
-        if(img) {
+        if (img) {
             img.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
         }
     };
