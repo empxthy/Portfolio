@@ -1,3 +1,9 @@
+nav ul {
+    list-style-type: none; /* Убирает стандартные маркеры */
+    padding: 0; /* Убирает внутренние отступы */
+    margin: 0; /* Убирает внешние отступы */
+}
+
 nav ul li {
     position: relative;
 }
@@ -5,6 +11,7 @@ nav ul li {
 nav ul li a {
     position: relative;
     padding-bottom: 8px;
+    display: block; /* Делаем ссылку блочным элементом для удобного клика */
 }
 
 nav ul li span {
@@ -31,4 +38,13 @@ nav ul li:hover span {
     font-size: 26px;
     color: #fff;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    nav .md\\:flex {
+        display: none;
+    }
 }
