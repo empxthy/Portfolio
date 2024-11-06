@@ -16,44 +16,31 @@
   font-style: normal;
 }
 
-:root {
-  font-family: Geist, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  --primary-color: #0098ea;
-  --primary-color-hover: #07acff;
-  --background-image: url('https://i.imgur.com/X36B5IB.png');
-
-  color-scheme: light dark;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-
-a {
-  cursor: pointer;
-  text-decoration: none;
-}
-
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: var(--background-image);
+  background-image: url('https://i.imgur.com/X36B5IB.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: overlay;
-  width: 100%;
-  height: auto;
   object-fit: cover;
+}
+
+.App {
+  max-width: 1200px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .App {
+      padding-left: 23px;
+      padding-right: 23px;
+  }
 }
 
 ::-webkit-scrollbar {

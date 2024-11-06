@@ -1,17 +1,21 @@
+
 nav ul {
-    list-style-type: none; /* Убирает стандартные маркеры */
-    padding: 0; /* Убирает внутренние отступы */
-    margin: 0; /* Убирает внешние отступы */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     position: relative;
+    margin: 0;
+    padding: 0;
 }
+
 
 nav ul li a {
     position: relative;
     padding-bottom: 8px;
-    display: block; /* Делаем ссылку блочным элементом для удобного клика */
+    display: block;
 }
 
 nav ul li span {
@@ -19,7 +23,7 @@ nav ul li span {
     left: 0;
     right: 0;
     bottom: -10px;
-    height: 2px; 
+    height: 2px;
     background-color: #8a2be2;
     border-radius: 10px;
     transform: scaleX(0);
@@ -30,20 +34,21 @@ nav ul li:hover span {
     transform: scaleX(1);
 }
 
+
 .logo {
     padding: 0;
     margin: 0;
-    width: 5em;
-    height: 1.5em;
     font-size: 26px;
     color: #fff;
     cursor: pointer;
 }
 
+
 @media (max-width: 768px) {
     nav ul {
         display: none;
     }
+
     nav .md\\:flex {
         display: none;
     }
