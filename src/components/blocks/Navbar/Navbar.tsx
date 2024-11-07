@@ -32,7 +32,7 @@ function NavBar() {
     ];
 
     return (
-        <nav className={`z-50 py-4 ${isScrolled ? 'bg-black-800 backdrop-blur-lg' : 'bg-transparent'} fixed`}>
+        <nav className={`z-50 py-4 ${isScrolled ? 'bg-black-800 backdrop-blur-lg rounded' : 'bg-transparent'} fixed`}>
             <div className="container mx-auto flex items-center md:px-1">
                 <h1 className={`${Styles.logo} flex-shrink-0`}>AlexM.</h1>
                 <div className="hidden md:flex">

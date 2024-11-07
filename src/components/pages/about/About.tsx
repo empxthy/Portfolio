@@ -46,12 +46,12 @@ function AboutMe() {
                     <AllTechBlocks />
                 </div>
             </div>
-            <div className="footer flex flex-col md:flex-row items-center justify-center py-6 bg-zinc-800 px-4">
+            <div className="footer flex flex-col md:flex-row items-center justify-center py-6 bg-zinc-800 rounded px-4">
                 <div className="footer__design text-center flex-1 mb-4 md:mb-0">
-                    <h1 className="text-sm sm:text-xl text-white">Designed by AlexM.</h1>
+                    <h1 className="text-1xl text-white">Designed by AlexM.</h1>
                 </div>
                 <div className="footer__copyright text-center flex-1 mb-4 md:mb-0">
-                    <h1 className="text-sm sm:text-xl text-white">Copyright©-∞ AlexM.</h1>
+                    <h1 className=":text-1xl text-white">Copyright©-∞ AlexM.</h1>
                 </div>
                 <div className="footer__socialmedia flex-1 text-white mb-4 md:mb-0">
                     <ul className="flex justify-center space-x-6">

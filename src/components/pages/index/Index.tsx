@@ -70,10 +70,10 @@ function Index() {
                 <div className="flex flex-col md:flex-row items-center justify-center w-full space-y-6 md:space-y-0 md:space-x-6">
                     <div className="home-about-header flex flex-col items-center md:items-start md:w-[60%]">
                         <h1 className="text-3xl text-white">Let me introduce myself</h1>
-                        <p className="text-white">When I was 11 years old I fell in love with programming. That's how my story began😁.</p>
-                        <p className="text-white">I am fluent in classics like: <strong>Python, JavaScript(TypeScript), C#.</strong></p>
-                        <p className="text-white">My focus is new Web development and products, as well as Web3, Blockchain(TON Network).</p>
-                        <p className="text-white">I use technologies such as Node JS and advanced Javascript Frameworks such as React JS, Next JS, Vue JS.</p>
+                        <p className="text-white text-left mb-1">When I was 11 years old I fell in love with programming. That's how my story began😁.</p>
+                        <p className="text-white text-left mb-1">I am fluent in classics like: <strong>Python, JavaScript(TypeScript), C#.</strong></p>
+                        <p className="text-white text-left mb-1">My focus is new Web development and products, as well as Web3, Blockchain(TON Network).</p>
+                        <p className="text-white text-left mb-1">I use technologies such as Node JS and advanced Javascript Frameworks such as React JS, Next JS, Vue JS.</p>
                     </div>
                     <div className="home-about-icon flex flex-col items-center md:items-end w-full md:w-[40%]">
                         <div 
@@ -119,7 +119,7 @@ function Index() {
                     </ul>
                 </div>
             </div>
-            <div className="footer flex flex-col md:flex-row items-center justify-center py-6 bg-zinc-800">
+            <div className="footer flex flex-col md:flex-row items-center justify-center py-6 bg-zinc-800 rounded">
                 <div className="footer__design text-center flex-1">
                     <h1 className="text-1xl text-white">Designed by AlexM.</h1>
                 </div>
