@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faUser, faDiagramProject, faAddressBook, faStar, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Styles from './Navbar.module.scss';
@@ -22,23 +23,41 @@ function NavBar() {
         };
     }, []);
 
+    const links = [
+        { path: '/', label: 'Home', icon: faHome, external: false },
+        { path: '/aboutMe', label: 'About Me', icon: faUser, external: false },
+        { path: '#projects', label: 'Projects', icon: faDiagramProject, external: false },
+        { path: '#resume', label: 'Resume', icon: faAddressBook, external: false },
+        { path: 'https://github.com/empxthy', label: 'Star on Github', icon: faStar, external: true }
+    ];
+
     return (
-        <nav className={`z-5 py-4 ${isScrolled ? 'bg-black-800 backdrop-blur-lg' : 'bg-transparent'} fixed`}>
-            <div className="container mx-auto flex items-center  md:px-1">
+        <nav className={`z-50 py-4 ${isScrolled ? 'bg-black-800 backdrop-blur-lg' : 'bg-transparent'} fixed`}>
+            <div className="container mx-auto flex items-center md:px-1">
                 <h1 className={`${Styles.logo} flex-shrink-0`}>AlexM.</h1>
                 <div className="hidden md:flex">
                     <ul className="flex relative pl-80 space-x-4">
-                        {['/', '#aboutme', '#projects', '#resume', 'https://github.com/empxthy'].map((link, index) => (
+                        {links.map((link, index) => (
                             <li key={index} className="relative group">
-                                <a 
-                                    href={link} 
-                                    className="text-white transition duration-300 flex items-center hover:text-black hover:bg-gray-200 px-2 py-1 rounded-md"
-                                    target={link === 'https://github.com/empxthy' ? '_blank' : '_self'}
-                                    rel={link === 'https://github.com/empxthy' ? 'noopener noreferrer' : undefined}
-                                >
-                                    <FontAwesomeIcon icon={index === 0 ? faHome : index === 1 ? faUser : index === 2 ? faDiagramProject : index === 3 ? faAddressBook : faStar} className="mr-2" />
-                                    {index === 0 ? 'Home' : index === 1 ? 'About Me' : index === 2 ? 'Projects' : index === 3 ? 'Resume' : 'Star on Github'}
-                                </a>
+                                {link.external ? (
+                                    <a
+                                        href={link.path}
+                                        className="text-white transition duration-300 flex items-center hover:text-black hover:bg-gray-200 px-2 py-1 rounded-md"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <FontAwesomeIcon icon={link.icon} className="mr-2" />
+                                        {link.label}
+                                    </a>
+                                ) : (
+                                    <Link
+                                        to={link.path}
+                                        className="text-white transition duration-300 flex items-center hover:text-black hover:bg-gray-200 px-2 py-1 rounded-md"
+                                    >
+                                        <FontAwesomeIcon icon={link.icon} className="mr-2" />
+                                        {link.label}
+                                    </Link>
+                                )}
                                 <span className="absolute left-0 right-0 h-1 bg-white transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
                             </li>
                         ))}
@@ -50,17 +69,28 @@ function NavBar() {
             </div>
             <div className={`md:hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                 <ul className={`bg-black-800 p-2 space-y-2 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-                    {['/', '#aboutme', '#projects', '#resume', 'https://github.com/empxthy'].map((link, index) => (
-                        <li key={index} className="relative">
-                            <a 
-                                href={link} 
-                                className="text-white transition duration-300 flex items-center hover:text-black hover:bg-gray-200 px-2 py-1 rounded-md"
-                                target={link === 'https://github.com/empxthy' ? '_blank' : '_self'}
-                                rel={link === 'https://github.com/empxthy' ? 'noopener noreferrer' : undefined}
-                            >
-                                <FontAwesomeIcon icon={index === 0 ? faHome : index === 1 ? faUser : index === 2 ? faDiagramProject : index === 3 ? faAddressBook : faStar} className="mr-2" />
-                                {index === 0 ? 'Home' : index === 1 ? 'About Me' : index === 2 ? 'Projects' : index === 3 ? 'Resume' : 'Star on Github'}
-                            </a>
+                    {links.map((link, index) => (
+                        <li key={index} className="relative group">
+                            {link.external ? (
+                                <a
+                                    href={link.path}
+                                    className="text-white transition duration-300 flex items-center hover:text-black hover:bg-gray-200 px-2 py-1 rounded-md"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FontAwesomeIcon icon={link.icon} className="mr-2" />
+                                    {link.label}
+                                </a>
+                            ) : (
+                                <Link
+                                    to={link.path}
+                                    className="text-white transition duration-300 flex items-center hover:text-black hover:bg-gray-200 px-2 py-1 rounded-md"
+                                >
+                                    <FontAwesomeIcon icon={link.icon} className="mr-2" />
+                                    {link.label}
+                                </Link>
+                            )}
+                            <span className="absolute left-0 right-0 h-1 bg-white transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
                         </li>
                     ))}
                 </ul>

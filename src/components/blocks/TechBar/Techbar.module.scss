@@ -1,0 +1,86 @@
+.tech_blocks_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.tech_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  height: 125px;
+  border: 2px solid #6c63ff;
+  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.tech_block:hover {
+  transform: scale(1.1);
+}
+
+.tech_icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 640px) {
+  .tech_blocks_container {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .tech_block {
+    width: calc(50% - 10px);
+    height: 120px;
+    font-size: 13px;
+  }
+
+  .tech_icon {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tech_blocks_container {
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .tech_block {
+    width: calc(33.33% - 12px);
+    height: 130px;
+    font-size: 14px;
+  }
+
+  .tech_icon {
+    font-size: 35px;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .tech_blocks_container {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .tech_block {
+    width: 200px;
+    height: 125px;
+    font-size: 14px;
+  }
+
+  .tech_icon {
+    font-size: 40px;
+  }
+}

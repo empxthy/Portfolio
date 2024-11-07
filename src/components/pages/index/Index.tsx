@@ -2,6 +2,8 @@ import Typewriter from "typewriter-effect";
 import NavBar from "../../blocks/Navbar/Navbar";
 import Boy from "../../../assets/boy.png";
 
+import styles from './index.module.scss';
+
 function Index() {
     const handleMouse = (e: React.MouseEvent | React.TouchEvent) => {
         const img = document.getElementById('boyImage') as HTMLImageElement;
@@ -32,7 +34,7 @@ function Index() {
             <section className="flex justify-center items-center h-screen">
                 <div className="home text-center">
                     <div className="home-header flex flex-col items-center justify-center h-full">
-                        <h1 className="text-white text-2xl">Howdy, Everyone! 👋🏼</h1>
+                        <h1 className="text-white text-2xl">Howdy, Everyone!<span className={styles.wave}>👋🏼</span></h1>
                         <h1 className="text-white text-2xl">It's Alex Mamedov🥥</h1>
                         <div className="mt-24">
                             <div className="Typewritter">
@@ -118,8 +120,8 @@ function Index() {
                 </div>
             </div>
             <div className="footer flex flex-col md:flex-row items-center justify-center py-6 bg-zinc-800">
-                <div className="footer__design text-center md:text-left flex-1">
-                    <h1 className="text-1xl text-white pl-20">Designed by AlexM.</h1>
+                <div className="footer__design text-center flex-1">
+                    <h1 className="text-1xl text-white">Designed by AlexM.</h1>
                 </div>
                 <div className="footer__copyright text-center flex-1">
                     <h1 className="text-1xl text-white">Copyright©-∞ AlexM.</h1>

@@ -1,0 +1,14 @@
+
+
+.quote_footer{
+    text-align: center;
+    color: rgb(116, 140, 123);
+
+    >:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: "\2014\00A0";
+    }
+}
