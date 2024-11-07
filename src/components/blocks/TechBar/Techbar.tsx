@@ -31,7 +31,12 @@ import {
     VscVscode
 } from "react-icons/vsc";
 
-const techs = [
+interface TechBlockProps {
+    name: string,
+    icon: JSX.Element;
+}
+
+const techs: { name: string, icon: JSX.Element }[] = [
     { name: 'C#', icon: <TbBrandCSharp /> },
     { name: 'Java', icon: <FaJava /> },
     { name: 'Python', icon: <FaPython /> },
@@ -46,7 +51,7 @@ const techs = [
     { name: 'Docker', icon: <FaDocker /> }
 ];
 
-const additionalTechs = [
+const additionalTechs: { name: string, icon: JSX.Element }[] = [
     { name: 'Windows', icon: <FaWindows /> },
     { name: 'VS Code', icon: <VscVscode /> },
     { name: 'Postman', icon: <SiPostman /> },
@@ -54,7 +59,7 @@ const additionalTechs = [
     { name: 'Vercel', icon: <SiVercel /> }
 ];
 
-const TechBlock = ({ name, icon }) => (
+const TechBlock = ({ name, icon }: TechBlockProps) => (
     <div className={styles.tech_block}>
         <div className={styles.tech_icon}>{icon}</div>
         <p>{name}</p>
