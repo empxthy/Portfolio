@@ -6,7 +6,7 @@ import {
     FaJava,
     FaGit,
     FaDocker,
-    FaWindows
+    FaLinux
 } from "react-icons/fa";
 
 import {
@@ -24,7 +24,8 @@ import {
 import {
     SiMysql,
     SiPostman,
-    SiVercel
+    SiVercel,
+    SiCplusplus
 } from "react-icons/si";
 
 import {
@@ -48,11 +49,11 @@ const techs: { name: string, icon: JSX.Element }[] = [
     { name: 'Git', icon: <FaGit /> },
     { name: 'MySQL', icon: <SiMysql /> },
     { name: 'MongoDB', icon: <DiMongodb /> },
-    { name: 'Docker', icon: <FaDocker /> }
+    { name: 'Docker', icon: <FaDocker /> },
 ];
 
 const additionalTechs: { name: string, icon: JSX.Element }[] = [
-    { name: 'Windows', icon: <FaWindows /> },
+    { name: 'Kali Linux', icon: <FaLinux /> },
     { name: 'VS Code', icon: <VscVscode /> },
     { name: 'Postman', icon: <SiPostman /> },
     { name: 'NGNIX', icon: <DiNginx /> },

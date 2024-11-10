@@ -27,7 +27,7 @@ function NavBar() {
         { path: '/', label: 'Home', icon: faHome, external: false },
         { path: '/about', label: 'About Me', icon: faUser, external: false },
         { path: '#projects', label: 'Projects', icon: faDiagramProject, external: false },
-        { path: '#resume', label: 'Resume', icon: faAddressBook, external: false },
+        { path: '/resume', label: 'Resume', icon: faAddressBook, external: false },
         { path: 'https://github.com/empxthy', label: 'Star on Github', icon: faStar, external: true }
     ];
 
