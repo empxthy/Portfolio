@@ -25,7 +25,6 @@ import {
     SiMysql,
     SiPostman,
     SiVercel,
-    SiCplusplus
 } from "react-icons/si";
 
 import {
