@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faUser, faDiagramProject, faAddressBook, faStar, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faUser, faAddressBook, faStar, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Styles from './Navbar.module.scss';
 
 function NavBar() {
@@ -26,7 +26,6 @@ function NavBar() {
     const links = [
         { path: '/', label: 'Home', icon: faHome, external: false },
         { path: '/about', label: 'About Me', icon: faUser, external: false },
-        { path: '#projects', label: 'Projects', icon: faDiagramProject, external: false },
         { path: '/resume', label: 'Resume', icon: faAddressBook, external: false },
         { path: 'https://github.com/empxthy', label: 'Star on Github', icon: faStar, external: true }
     ];
@@ -36,7 +35,7 @@ function NavBar() {
             <div className="container mx-auto flex items-center md:px-1">
                 <h1 className={`${Styles.logo} flex-shrink-0`}>AlexM.</h1>
                 <div className="hidden md:flex">
-                    <ul className="flex relative pl-80 space-x-4">
+                    <ul className="flex relative pl-[435px] space-x-4">
                         {links.map((link, index) => (
                             <li key={index} className="relative group">
                                 {link.external ? (
