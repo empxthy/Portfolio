@@ -8,6 +8,7 @@ export default {
       },
       colors: {
         hPurple: "#e966eb",
+        pBlue: "#6c63ff",
       }
     },
   },

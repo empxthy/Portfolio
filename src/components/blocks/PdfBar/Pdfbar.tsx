@@ -36,10 +36,12 @@ const PdfViewer: React.FC = () => {
 
     return (
         <>
-            <div className="absolute z-10 top-12 sm:top-12 left-1/2 transform -translate-x-1/2 ssm:top-20">
-                <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center sm:m-6 hover:text-white hover:shadow-lg transition duration-200 ease-in-out text-center text-lg sm:text-xl">
-                    <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-                    <a href={cv} download="cv.pdf" className="text-gray-800 hover:text-white">Download CV</a>
+            <div className="absolute z-10 top-24 sm:top-28 left-1/2 transform -translate-x-1/2">
+                <button className="bg-pBlue text-white font-semibold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 hover:bg-black transition-all duration-300 ease-in-out inline-flex items-center">
+                    <svg className="w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
+                    </svg>
+                    <span className="text-lg">Download CV</span>
                 </button>
             </div>
             <div className="relative mt-20 sm:mt-24 mb-8 sm:mb-0">

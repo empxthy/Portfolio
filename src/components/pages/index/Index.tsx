@@ -68,8 +68,8 @@ function Index() {
             </section>
             <div className="about flex flex-col items-center text-center w-full py-12">
                 <div className="flex flex-col md:flex-row items-center justify-center w-full space-y-6 md:space-y-0 md:space-x-6">
-                    <div className="home-about-header flex flex-col items-center md:items-start md:w-[60%]">
-                        <h1 className="text-3xl text-white">Let me introduce myself</h1>
+                    <div className="home-about-header flex flex-col items-center md:items-start md:w-[70%]">
+                        <h1 className="text-3xl text-white text-left mb-5">Let me introduce myself</h1>
                         <p className="text-white text-left mb-1">When I was 11 years old I fell in love with programming. That's how my story began😁.</p>
                         <p className="text-white text-left mb-1">I am fluent in classics like: <strong>Python, JavaScript(TypeScript), C#.</strong></p>
                         <p className="text-white text-left mb-1">My focus is new Web development and products, as well as Web3, Blockchain(TON Network).</p>

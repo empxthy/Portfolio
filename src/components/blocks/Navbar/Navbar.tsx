@@ -5,36 +5,35 @@ import { faHome, faUser, faAddressBook, faStar, faBars, faTimes } from "@fortawe
 import Styles from './Navbar.module.scss';
 
 function NavBar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Обработчик прокрутки страницы
-  const handleScroll = () => {
-    setIsScrolled(window.scrollY > 50); // Добавление эффекта при прокрутке
-  };
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(prev => !prev);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+        setIsScrolled(window.scrollY > 50);
     };
-  }, []);
 
-  const links = [
-    { path: "/", label: "Home", icon: faHome, external: false },
-    { path: "/about", label: "About Me", icon: faUser, external: false },
-    { path: "/resume", label: "Resume", icon: faAddressBook, external: false },
-    { path: "https://github.com/empxthy", label: "Star on Github", icon: faStar, external: true }
-  ];
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(prev => !prev);
+    };
 
-  return (
-        <nav className={`z-50 py-4 fixed top-0 left-0 right-0 w-full transition-all duration-300 ease-in-out ${isScrolled ? " backdrop-blur-lg" : "bg-transparent"}`}>
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+        window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const links = [
+        { path: "/", label: "Home", icon: faHome, external: false },
+        { path: "/about", label: "About Me", icon: faUser, external: false },
+        { path: "/resume", label: "Resume", icon: faAddressBook, external: false },
+        { path: "https://github.com/empxthy", label: "Star on Github", icon: faStar, external: true }
+    ];
+
+    return (
+        <nav className={`sticky top-0 w-full z-50 py-4 transition-all duration-300 ease-in-out ${isScrolled ? " backdrop-blur-lg rounded" : "bg-transparent"}`}>
             <div className="container mx-auto flex justify-between items-center px-4 md:px-1">
-                <h1 className={`${Styles.logo} flex-shrink-0`}>AlexM.</h1>
+                <h1 className={`${Styles.logo}`}>AlexM.</h1>
                 <div className="hidden md:flex">
                     <ul className="flex relative space-x-4">
                         {links.map((link, index) => (
@@ -96,7 +95,7 @@ function NavBar() {
                 </ul>
             </div>
         </nav>
-    );
+);
 }
 
 export default NavBar;
