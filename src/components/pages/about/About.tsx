@@ -10,35 +10,34 @@ function AboutMe() {
         <>
             <NavBar />
             <section className="flex justify-center items-center h-screen px-4">
-    <div className="flex flex-col md:flex-row items-center justify-center w-full space-y-6 md:space-y-0 md:space-x-6">
-        <div className="home-about-header flex flex-col items-start md:items-start md:w-[70%] w-full">
-            <h1 className="text-2xl sm:text-3xl text-white text-left">Who I am?</h1>
-            <p className="text-white text-lg sm:text-2xl mt-2 text-left">Howdy, Everyone. I'm Alex Mamedov from Tbilisi, Georgia.</p>
-            <p className="text-white text-lg sm:text-2xl text-left">I'm not currently working anywhere.</p>
-            <p className="text-white text-lg sm:text-2xl text-left">I am a math and physics calculus student, as well as a computer engineer and scientist.</p>
-            <p className="text-white text-lg sm:text-2xl mt-2 text-left">In addition to programming, I also love:</p>
-            <ul className="mt-2 mx-6 text-left">
-                <li className="activity text-white text-base sm:text-lg"><i className="fa-solid fa-hand-point-right"></i> Playing VideoGames.</li>
-                <li className="activity text-white text-base sm:text-lg"><i className="fa-solid fa-hand-point-right"></i> Drinking coffee.</li>
-                <li className="activity text-white text-base sm:text-lg"><i className="fa-solid fa-hand-point-right"></i> Learning something new.</li>
-            </ul>
-            <p className="mt-2 ml-8 sm:ml-32 text-left" style={{ color: 'rgb(116, 140, 123)' }}>"Strive to create something new and yourself, too!"</p>
-            <footer className={`${styles.quote_footer} ml-8 sm:ml-64 text-left`}> "Alex"</footer>
-        </div>
-        <div className="home-about-icon flex flex-col items-center md:items-end w-full md:w-[30%] mt-6 md:mt-0">
-            <div className="flex justify-center items-center">
-                <img 
-                    src={Programmer} 
-                    style={{ maxHeight: '250px', maxWidth: '250px' }} 
-                    alt="Programmer" 
-                    id="boyImage"
-                    className="w-3/4 sm:w-1/2 md:w-full"
-                />
-            </div>
-        </div>
-    </div>
-</section>
-
+                <div className="flex flex-col md:flex-row items-center justify-center w-full space-y-6 md:space-y-0 md:space-x-6">
+                    <div className="home-about-header flex flex-col items-start md:items-start md:w-[70%] w-full">
+                        <h1 className="text-2xl sm:text-3xl text-white text-left">Who I am?</h1>
+                        <p className="text-white text-lg sm:text-2xl mt-2 text-left">Howdy, Everyone. I'm Alex Mamedov from Tbilisi, Georgia.</p>
+                        <p className="text-white text-lg sm:text-2xl text-left">I'm not currently working anywhere.</p>
+                        <p className="text-white text-lg sm:text-2xl text-left">I am a math and physics calculus student, as well as a computer engineer and scientist.</p>
+                        <p className="text-white text-lg sm:text-2xl mt-2 text-left">In addition to programming, I also love:</p>
+                        <ul className="mt-2 mx-6 text-left">
+                            <li className="activity text-white text-base sm:text-lg"><i className="fa-solid fa-hand-point-right"></i> Playing VideoGames.</li>
+                            <li className="activity text-white text-base sm:text-lg"><i className="fa-solid fa-hand-point-right"></i> Drinking coffee.</li>
+                            <li className="activity text-white text-base sm:text-lg"><i className="fa-solid fa-hand-point-right"></i> Learning something new.</li>
+                        </ul>
+                        <p className="mt-2 ml-8 sm:ml-32 text-left" style={{ color: 'rgb(116, 140, 123)' }}>"Strive to create something new and yourself, too!"</p>
+                        <footer className={`${styles.quote_footer} ml-8 sm:ml-64 text-left`}> "Alex"</footer>
+                    </div>
+                    <div className="home-about-icon flex flex-col items-center md:items-end w-full md:w-[30%] mt-6 md:mt-0">
+                        <div className="flex justify-center items-center">
+                            <img 
+                                src={Programmer} 
+                                style={{ maxHeight: '250px', maxWidth: '250px' }} 
+                                alt="Programmer" 
+                                id="boyImage"
+                                className="w-3/4 sm:w-1/2 md:w-full"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
             <div className="skills flex flex-col items-center text-center w-full py-6 px-4">
                 <div className="text-center">
                     <h1 className="text-white text-xl sm:text-3xl">
