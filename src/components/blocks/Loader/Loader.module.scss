@@ -42,12 +42,18 @@
 .spinner {
   width: 100px;
   height: 100px;
-  animation: rotateCube 2s linear infinite;
+  animation: rotateCube 1s linear infinite;
 }
 
 @keyframes rotateCube {
   0% {
     transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(180deg);
   }
   100% {
     transform: rotate(360deg);
