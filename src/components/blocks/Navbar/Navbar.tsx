@@ -33,7 +33,7 @@ function NavBar() {
     return (
         <nav className={`sticky top-0 w-full z-50 py-4 transition-all duration-300 ease-in-out ${isScrolled ? " backdrop-blur-lg rounded" : "bg-transparent"}`}>
             <div className="container mx-auto flex justify-between items-center px-4 md:px-1">
-                <h1 className={`${Styles.logo}`}>AlexM.</h1>
+                <Link to='/'><h1 className={`${Styles.logo}`}>AlexM.</h1></Link>
                 <div className="hidden md:flex">
                     <ul className="flex relative space-x-4">
                         {links.map((link, index) => (
