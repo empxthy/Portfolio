@@ -124,7 +124,7 @@ function Index() {
                     <h1 className="text-1xl text-white">Designed by AlexM.</h1>
                 </div>
                 <div className="footer__copyright text-center flex-1">
-                    <h1 className="text-1xl text-white">Copyright©-∞ AlexM.</h1>
+                    <h1 className="text-1xl text-white">Copyright©-2025 AlexM.</h1>
                 </div>
                 <div className="footer__socialmedia flex-1 text-white">
                     <ul className="flex justify-center space-x-6">

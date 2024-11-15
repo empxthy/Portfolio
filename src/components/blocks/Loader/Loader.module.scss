@@ -1,0 +1,83 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #333333, #111111);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 0s 1s;
+}
+
+.preloaderText {
+  color: white;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  font-size: 1.25rem;
+
+  @media (min-width: 640px) {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
+}
+
+.fadeIn {
+  animation: fadeInMessage 1s ease-out forwards;
+}
+
+.fadeOut {
+  animation: fadeOutMessage 0.5s ease-in forwards;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  animation: rotateCube 2s linear infinite;
+}
+
+@keyframes rotateCube {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInMessage {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutMessage {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 3s ease, visibility 1s 1s;
+}
