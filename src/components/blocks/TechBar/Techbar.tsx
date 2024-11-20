@@ -25,6 +25,7 @@ import {
     SiMysql,
     SiPostman,
     SiVercel,
+    SiFastapi
 } from "react-icons/si";
 
 import {
@@ -45,6 +46,7 @@ const techs: { name: string, icon: JSX.Element }[] = [
     { name: 'TypeScript', icon: <TbBrandTypescript /> },
     { name: 'React Js', icon: <FaReact /> },
     { name: 'Next Js', icon: <TbBrandNextjs /> },
+    { name: 'Fast API', icon: <SiFastapi /> },
     { name: 'Git', icon: <FaGit /> },
     { name: 'MySQL', icon: <SiMysql /> },
     { name: 'MongoDB', icon: <DiMongodb /> },
