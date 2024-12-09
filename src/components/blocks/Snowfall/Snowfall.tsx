@@ -2,7 +2,7 @@
 import React from 'react';
 import Snowfall from 'react-snowfall';
 
-const speed: number[] = [0.5, 2.0]
+const speed= [0.5, 2.0]
 
 const SnowfallEffect: React.FC = () => {
   return (
