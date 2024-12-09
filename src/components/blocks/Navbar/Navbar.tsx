@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faUser, faAddressBook, faStar, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import logo from '../../../assets/logo.png'
 import Styles from './Navbar.module.scss';
 
 function NavBar() {
@@ -33,7 +34,7 @@ function NavBar() {
     return (
         <nav className={`sticky top-0 w-full z-50 py-4 transition-all duration-300 ease-in-out ${isScrolled ? " backdrop-blur-lg rounded" : "bg-transparent"}`}>
             <div className="container mx-auto flex justify-between items-center px-4 md:px-1">
-                <Link to='/'><h1 className={`${Styles.logo}`}>AlexM.</h1></Link>
+                <Link to='/'><img className={`${Styles.logo}`} src={logo} /></Link>
                 <div className="hidden md:flex">
                     <ul className="flex relative space-x-4">
                         {links.map((link, index) => (

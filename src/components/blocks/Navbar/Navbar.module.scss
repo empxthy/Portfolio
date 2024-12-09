@@ -41,6 +41,7 @@ nav ul li:hover span {
     font-size: 26px;
     color: #fff;
     cursor: pointer;
+    user-select: none;
 }
 
 @media (max-width: 768px) {

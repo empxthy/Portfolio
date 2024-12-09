@@ -3,6 +3,7 @@ import Index from './components/pages/index/Index';
 import AboutMe from "./components/pages/about/About";
 import Resume from "./components/pages/resume/Resume";
 import Loader from "./components/blocks/Loader/Loader";
+import SnowfallEffect from "./components/blocks/Snowfall/Snowfall";
 import './main.scss'
 
 
@@ -11,6 +12,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Loader /> 
+        <SnowfallEffect />
         <Routes>
             <Route index element={<Index />} />
             <Route path={"/about"} element={<AboutMe />} />
